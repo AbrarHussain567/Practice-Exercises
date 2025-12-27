@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+
+    /* Standard body styling to center the Mondrian container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    /* Layout for the Mondrian container using CSS Grid */
+    .mondrian-container {
+      width: 748px;
+      height: 748px;
+      display: grid;
+      grid-template-columns: 320px 360px 50px;
+      grid-template-rows: 414px 296px 20px;
+      gap: 9px;
+      background-color: #000;
+    }
+
+    /* Setting up individual grid items with colors and spans */
+    .red {
+      grid-row: 1;
+      grid-column: 1;
+      background-color: #E72F24;
+    }
+
+    .box2 {
+      grid-column: 2 / span 2; /* Second box which spans obver two grid cells */
+      grid-row: 1;
+    }
+    .white {
+      background-color: #F0F1EC;
+    }
+    .blue-and-white {
+      grid-column: 3;
+      grid-row: 2 / span 2;
+    }
+    .blue{
+      height: 130px;
+      background-color: #004592;
+    }
+    .blue-and-white .white {
+      height: 185px;
+    }
+    .vertical-flex-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .yellow-and-black {
+      grid-column: 2;
+      grid-row: 3;
+    }
+    .yellow{
+      width: 198px;
+      background-color: #F9D01E;
+    }
+    .black{
+      width: 162px;
+      background-color: #7b8792;
+    }
+    .horizontal-flex-container {
+      display: flex;
+      flex-direction: row;
+      height: 20px; /* Set height for the horizontal container in order to make the child elements visible */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="mondrian-container">
+
+    <!-- Red and white boxes -->
+  
+      <div class="red"></div>
+      <div class="box2 white"></div>
+      <div class="white"></div>
+      <div class="white"></div>
+
+    <!-- Vertical flex container -->
+      <div class="blue-and-white"> 
+        <div class="vertical-flex-container">
+          <div class="blue"></div>
+          <div class="white"></div>
+        </div>
+      </div>
+      
+    <!-- Horizontal flex container -->
+      <div class="yellow-and-black"> 
+        <div class="horizontal-flex-container">
+          <div class="yellow"></div>
+          <div class="black"></div>
+        </div>
+      </div>
+      
+  </div>
+
+</body>
+
+</html>
